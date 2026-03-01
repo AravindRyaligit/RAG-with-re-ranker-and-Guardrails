@@ -5,11 +5,12 @@ A powerful Retrieval-Augmented Generation (RAG) chatbot that allows users to upl
 ## 🚀 Features
 - **Document Ingestion:** Upload and process PDF and TXT documents.
 - **Smart Retrieval:** Vector-based search to find the most relevant document chunks.
-- **RAG Pipeline:** Combines retrieved context with an LLM to answer questions accurately.
-- **Interactive UI:** A clean, modern frontend built with React and Vite for a seamless user experience.
+- **Cross-Encoder Re-ranking:** (Optional) Use a state-of-the-art `ms-marco-MiniLM` cross-encoder model to re-score and select the highest-quality context for the LLM.
+- **RAG Pipeline:** Combines retrieved context with an LLM (Llama 3) to answer questions accurately.
+- **Interactive UI:** A clean, modern frontend built with React and Vite featuring a dual-tab layout for Normal and Re-ranked RAG modes.
 
 ## 🛠️ Technology Stack
-- **Backend:** FastAPI (Python), LangChain (or equivalent RAG framework), FAISS (Vector Store)
+- **Backend:** FastAPI (Python), LangChain, FAISS (Vector Store), Sentence-Transformers (Cross-Encoder)
 - **Frontend:** React, Vite, Lucide React (Icons)
 - **Deployment:** Ready for local development with Uvicorn and Vite Dev Server.
 
@@ -60,7 +61,8 @@ A powerful Retrieval-Augmented Generation (RAG) chatbot that allows users to upl
 ## 📝 Usage
 1. Open the frontend in your browser (usually `http://localhost:5173`).
 2. Upload a PDF or TXT document using the provided interface.
-3. Start asking questions related to the uploaded document in the chat interface!
+3. Use the tab switcher at the top to choose between **"Normal RAG"** (faster) and **"+ Re-ranker"** (higher accuracy).
+4. Start asking questions related to the uploaded document in the chat interface!
 
 ## 📜 License
 This project is open-source and free to use.
