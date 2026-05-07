@@ -1,6 +1,6 @@
-# RAG Agent - PDF Q&A
+# Advanced RAG WebApp
 
-A Retrieval-Augmented Generation agent that lets you upload PDF documents and ask questions about their content. Built with LangChain, Groq (Llama 3.3 70B), ChromaDB, and a BGE reranker for improved accuracy.
+A robust Retrieval-Augmented Generation (RAG) web application featuring intelligent re-ranking, built-in safety guardrails, and an intuitive Streamlit interface for secure and accurate document querying. Built with LangChain, Groq (Llama 3.3 70B), ChromaDB, and a BGE reranker for improved accuracy.
 
 ## Architecture
 
@@ -87,6 +87,7 @@ RAG/
     embeddings.py           # BGE embedding model
     vectorstore.py          # ChromaDB operations
     reranker.py             # Cross-encoder reranker
+    guardrails.py           # Input/Output safety guardrails
     rag_chain.py            # RAG pipeline (retrieve -> rerank -> generate)
     schemas.py              # Pydantic request/response models
   frontend/
